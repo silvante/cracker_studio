@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+  user-select: none;
+}
+
+body {
+  @apply bg-gray-900 text-white;
+}
