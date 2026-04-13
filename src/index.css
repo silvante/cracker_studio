@@ -10,10 +10,31 @@
 :root {
   font-family: "Inter", sans-serif;
   user-select: none;
+  --titlebar-height: 30px;
+}
+
+html,
+#root {
+  height: 100%;
 }
 
 body {
   @apply bg-gray-900 text-white;
+}
+
+/* The custom-electron-titlebar injects a 30px bar above the app and
+   wraps content in .cet-container sized to viewport - titlebar.
+   Make h-screen match that usable area so it doesn't overflow. */
+.h-screen {
+  height: calc(100vh - var(--titlebar-height));
+}
+
+.min-h-screen {
+  min-height: calc(100vh - var(--titlebar-height));
+}
+
+.max-h-screen {
+  max-height: calc(100vh - var(--titlebar-height));
 }
 
 /* universal padding */
