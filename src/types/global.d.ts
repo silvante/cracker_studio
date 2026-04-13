@@ -1,9 +1,11 @@
 export {};
 
+export interface ElectronAPI {
+  ping: () => string;
+}
+
 declare global {
   interface Window {
-    api: {
-      ping: () => string;
-    };
+    api: ElectronAPI;
   }
 }
