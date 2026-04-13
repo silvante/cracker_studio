@@ -1,9 +1,16 @@
-import { Link } from "react-router-dom";
+import { Plus } from "lucide-react";
+import Button from "../shared/Button";
+import Heading from "../shared/Heading";
 
 const HomePage = () => {
   return (
     <div>
-      HomePage <Link to={"/about"} className="text-blue-700">About page</Link>
+      <div className="flex items-center justify-between">
+        <Heading>All VPS servers</Heading>
+        <Button>
+          <Plus /> Add server
+        </Button>
+      </div>
     </div>
   );
 };
