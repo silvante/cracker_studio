@@ -1,5 +1,7 @@
-import RegsiterHelloHandlers from "./helloHandler";
+import RegsiterHelloHandlers from "./helloHandler.js";
 
-module.exports = function ExportAllFunctions() {
+function RegisterAllFunctions() {
   RegsiterHelloHandlers();
-};
+}
+
+export default RegisterAllFunctions;

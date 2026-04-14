@@ -1,7 +1,9 @@
-const { ipcMain } = require("electron");
+import { ipcMain } from "electron";
 
-module.exports = function RegsiterHelloHandlers() {
+function RegsiterHelloHandlers() {
   ipcMain.handle("hello:greet", async (event, name) => {
     return `hello, ${name}!`;
   });
-};
+}
+
+export default RegsiterHelloHandlers;
