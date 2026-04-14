@@ -2,6 +2,7 @@ import { setupTitlebarAndAttachToWindow } from "custom-electron-titlebar/main";
 import { app, BrowserWindow } from "electron";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import ExportAllFunctions from "./ipc/index";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -30,5 +31,7 @@ function createWindow() {
     themeConfigPath: path.join(__dirname, "titlebar.theme.json"),
   });
 }
+
+ExportAllFunctions();
 
 app.whenReady().then(createWindow);

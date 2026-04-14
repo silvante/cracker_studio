@@ -1,8 +1,8 @@
 import { createTitlebarOnDOMContentLoaded } from "custom-electron-titlebar";
-import { contextBridge } from "electron";
+import { contextBridge, ipcRenderer } from "electron";
 
 contextBridge.exposeInMainWorld("api", {
-  ping: () => "pong from electron",
+  hello: (name) => ipcRenderer.invoke("hello", name),
 });
 
 createTitlebarOnDOMContentLoaded();

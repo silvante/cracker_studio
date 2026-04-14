@@ -1,7 +1,7 @@
 export {};
 
 export interface ElectronAPI {
-  ping: () => string;
+  hello: (name: string) => string;
 }
 
 declare global {
